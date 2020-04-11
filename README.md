@@ -1,5 +1,8 @@
-# README
+# User Dashboard
 
-sign up, sign in and sign out
 
-* ...
+* User can sign up using his name and password.
+* Returning users can login in
+* Once logged in, dashboard is displayed
+
+* used semantic ui
