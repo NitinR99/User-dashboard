@@ -1,0 +1,36 @@
+<%if logged_in?%>
+<div class="ui secondary pointing menu">
+  <a class="item active">
+    Home
+  </a>
+  <a class="item">
+    Messages
+  </a>
+  <a class="item">
+    Friends
+  </a>
+  <div class="right menu">
+    <a class="ui item">
+      <%= link_to "Sign out", '/logout', :class =>"item" %>
+    </a>
+  </div>
+</div>
+<div class="ui container">
+<div class="ui segment">
+  <h1>Welcome</h1>
+    <h1>You are Logged In, <%= current_user.username %></h1>
+</div>
+</div>
+
+<%else %>
+<div class="ui raised very padded text container segment" style="text-align:center">
+<div class="ui one column doubling grid">
+<div class="column">
+<%= button_to "Sign In", '/login', method: :get, :class =>"ui raised button"%>
+</div>
+<div class="column">
+<%= button_to "Login", '/users/new', method: :get, :class =>"ui raised button"%>
+</div>
+</div>
+<%end%>
+
