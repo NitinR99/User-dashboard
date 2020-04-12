@@ -1,10 +1,33 @@
-<h1>Sign up</h1>
+<div class="ui one column stackable center aligned page grid">
+<div class="column">
+<div class="ui raised very padded text container segment" style="text-align:center">
+<div class="ui one column doubling grid">
+  <div class="column">
+  <h1 style="text-align:center">Sign up</h1>
+  <%= form_for @user do |f|%>
+  </div>
+<div class="column">
+  <%= f.label :username%><br>
+  <div class="ui left icon input">
+  <%= f.text_field :username%><br>
+  <i class="user icon"></i>
+  </div>
+</div>
+<div class="column">
+  <%= f.label :password%><br>
+  <div class="ui left icon input">
+  <%= f.password_field :password%><br>
+  <i class="key icon"></i>
 
-<%= form_for @user do |f|%>
-    <%= f.label :username%><br>
-    <%= f.text_field :username%><br>
-    <%= f.label :password%><br>
-    <%= f.password_field :password%><br>
+</div>
+<div class="column">
 
     <%= f.submit %>
+      <%= link_to 'Back', '/welcome' %>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
 <%end%>

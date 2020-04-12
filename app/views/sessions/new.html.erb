@@ -1,11 +1,33 @@
-<h1>Login</h1>
+<div class="ui one column stackable center aligned page grid">
+<div class="column">
+<div class="ui raised very padded text container segment" >
+<div class="ui one column doubling grid">
+  <div class="column">
+  <h1 style="text-align:center">Login</h1>
+  <%= form_tag '/login' do%>
+  </div>
+<div class="column">
+  <%= label_tag :username%><br>
+  <div class="ui left icon input">
+  <%= text_field_tag :username%><br>
+  <i class="user icon"></i>
+</div>
 
-<%= form_tag '/login' do%>
-    <%= label_tag :username%><br>
-    <%= text_field_tag :username%><br>
-    <%= label_tag :password%><br>
-    <%= password_field_tag :password%><br>
+</div>
+<div class="column">
+  <%= label_tag :password%><br>
+  <div class="ui left icon input">
+  <%= password_field_tag :password%><br>
+  <i class="key icon"></i>
+</div>
+</div>
+<div class="column">
+  <%= submit_tag "Login", :class =>"ui button" %>
+  <%= link_to 'Back', '/welcome' %>
+  </div>
+</div>
+</div>
+</div>
+</div>
 
-    <%= submit_tag "Login" %>
 <%end%>
-
