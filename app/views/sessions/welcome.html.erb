@@ -1,31 +1,4 @@
-<%if logged_in?%>
-<div class="ui simple secondary pointing menu">
-  <a class="item active">
-    Home
-  </a>
-  <a class="item">
-    Messages
-  </a>
-  <a class="item">
-    Friends
-  </a>
-  <div class="ui right compact menu">
-  <div class="ui simple dropdown item">
-    <%= current_user.username %>
-    <i class="dropdown icon"></i>
-    <div class="menu">
-      <div class="item">My account</div>
-      <div class="item">Preferences</div>
-      <div class="item"><%= link_to "Sign out", '/logout', :class =>"item" %></div>
-    </div>
-  </div>
-</div>
-</div>
 
-<%yield %>
-</div>
-
-<%else %>
 <div class="ui one column stackable center aligned page grid">
 <div class="column">
 <div class="ui raised very padded text container segment" style="text-align:center">
@@ -41,4 +14,4 @@
 </div>
 </div>
 
-<%end%>
+
