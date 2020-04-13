@@ -1,0 +1,27 @@
+<div class="ui simple secondary pointing menu stackable">
+<div class="header item">
+   <h3> myDash</h3>
+  	</div>
+  <%= link_to "Home".html_safe, home_path, class: "item" %>
+  <a class="item">
+    Messages
+  </a>
+  <a class="item">
+    Friends
+  </a>
+  <div class="ui right compact menu">
+  <div class="ui simple dropdown item">
+    <%= current_user.username %>
+    <i class="dropdown icon"></i>
+    <div class="menu">
+      <div class="item">Preferences</div>
+      <%= link_to "Sign out", logout_path, :class =>"item" %>
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
+<div>
+<%= yield %>
+</div>
