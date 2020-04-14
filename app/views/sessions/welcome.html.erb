@@ -2,16 +2,25 @@
 <div class="ui one column stackable center aligned page grid">
 <div class="column">
 <div class="ui raised very padded text container segment" style="text-align:center">
-<div class="ui one column doubling grid">
 <div class="column">
-<%= button_to "Login", '/login', method: :get, :class =>"ui raised button"%>
+  <div class="ui form">
+
+<div class="field">
+<%= button_to "Login with myDash account", '/login', method: :get, :class =>"ui raised button"%>
 </div>
-<div class="column">
+<div class="field">
+  <button class="ui google plus button">
+  <i class="google icon"></i>
+  Login with Google
+</button>
+  </div>
+<div class="ui divider"></div>
+<p style="text-align:center">New here?</p>
+<div class="field">
 <%= button_to "Sign up", '/users/new', method: :get, :class =>"ui raised button"%>
 </div>
 </div>
 </div>
 </div>
 </div>
-
-
+</div>

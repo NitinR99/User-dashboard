@@ -10,6 +10,8 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:password])
         session[:user_id] = user.id 
         redirect_to '/authorized'
+    else
+	flash[:error] = 'An error occured!'
     end
   end
 def destroy
