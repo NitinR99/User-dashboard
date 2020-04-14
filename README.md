@@ -1,5 +1,7 @@
 # User Dashboard
-
+### - Authenticates returning users
+### - Signs up new users
+### - bare tables
 
 * User can sign up using his name and password.
 * Returning users can login in
