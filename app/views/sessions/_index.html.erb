@@ -3,12 +3,9 @@
    <h3> myDash</h3>
   	</div>
   <%= link_to "Home".html_safe, home_path, class: "item" %>
-  <a class="item">
-    Messages
-  </a>
-  <a class="item">
-    Friends
-  </a>
+  <%= link_to "Messages".html_safe, messages_path, class: "item" %>
+  <%= link_to "Friends".html_safe, friends_path, class: "item" %>
+
   <div class="ui right compact menu">
   <div class="ui simple dropdown item">
     <%= current_user.username %>
@@ -20,7 +17,6 @@
   </div>
 </div>
 </div>
-<%= current_user.created_at="false" %>
 </div>
 <div>
 <%= yield %>
